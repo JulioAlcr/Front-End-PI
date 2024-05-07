@@ -98,15 +98,15 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Adicionar Receita ou Despesa</h2>
-                <form id="addForm">
-                    <select name="tipo" id="tipo">
+                <form id="addForm" action="script.php" method="post">
+                    <select title="Adicionar Despesa ou Receita" name="tipo" id="tipo">
                         <option value="" disabled selected hidden>Selecione o tipo</option>
                         <option value="receita">Receita</option>
                         <option value="despesa">Despesa</option>
                     </select>
-                    <input type="text" id="descricao" name="descricao" placeholder="Descrição">
-                    <input type="text" id="valor" name="valor" placeholder="R$ ">
-                    <input type="date" id="data" name="data">
+                    <input title="Adicionar Descrição" type="text" id="descricao" name="descricao" placeholder="Descrição">
+                    <input title="Adicionar Valor" type="text" id="valor" name="valor" placeholder="R$ ">
+                    <input title="Adicionar Data" type="date" id="data" name="data">
                     <div class="btns">
                         <button type="submit" id="env">Enviar</button>
                         <button id="cnc" type="button" class="cancel">Cancelar</button>
@@ -126,5 +126,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="Home_menu.js"></script>
+
 </body>
 </html>

@@ -107,25 +107,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     
-    const addForm = document.getElementById('addForm');
+    // const addForm = document.getElementById('addForm'); //alguma coisa aqui está impedindo o metodo post
 
-    addForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Evita o comportamento padrão de enviar o formulário
+    // addForm.addEventListener('submit', function (event) {
+    //     event.preventDefault(); // Evita o comportamento padrão de enviar o formulário
 
-        const tipo = document.getElementById('tipo').value;
-        const descricao = document.getElementById('descricao').value; // Obtém a descrição do campo de entrada
-        const valor = parseFloat(document.getElementById('valor').value);
-        const data = new Date(document.getElementById('data').value);
+    //     const tipo = document.getElementById('tipo').value;
+    //     const descricao = document.getElementById('descricao').value; // Obtém a descrição do campo de entrada
+    //     const valor = parseFloat(document.getElementById('valor').value);
+    //     const data = new Date(document.getElementById('data').value);
 
-        if (tipo === 'receita') {
-            adicionarReceita(descricao, valor, data);
-        } else if (tipo === 'despesa') {
-            adicionarDespesa(descricao, valor, data);
-        }
+    //     if (tipo === 'receita') {
+    //         adicionarReceita(descricao, valor, data);
+    //     } else if (tipo === 'despesa') {
+    //         adicionarDespesa(descricao, valor, data);
+    //     }
 
-        // Limpa os campos do formulário
-        addForm.reset();
-    });
+    //     // Limpa os campos do formulário
+    //     //addForm.reset();
+    // });
 
     const menuitem = document.querySelectorAll('.item-menu');
 

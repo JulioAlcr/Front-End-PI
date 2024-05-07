@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="addForm" action="script.php" method="post">
+                    <select title="Adicionar Despesa ou Receita" name="tipo" id="tipo">
+                        <option value="" disabled selected hidden>Selecione o tipo</option>
+                        <option value="receita">Receita</option>
+                        <option value="despesa">Despesa</option>
+                    </select>
+                    <input title="Adicionar Descrição" type="text" id="descricao" name="descricao" placeholder="Descrição">
+                    <input title="Adicionar Valor" type="text" id="valor" name="valor" placeholder="R$ ">
+                    <div class="btns">
+                        <button type="submit" name="submit" id="env">Enviar</button>
+                        <button id="cnc" type="button" class="cancel">Cancelar</button>
+                    </div>
+                </form>
+</body>
+</html>
