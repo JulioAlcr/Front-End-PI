@@ -1,0 +1,422 @@
+@font-face {
+    font-family: Marven;
+    src: url("fonts/MavenPro-VariableFont_wght.ttf")format(truetype);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marven';
+}
+
+body{
+    height: 100vh;
+    background-color: #d1deed;
+}
+
+nav.menu-lateral{
+    z-index: 2;
+    justify-content: center;
+    width: 90px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 40px 0 40px 1%;
+    box-shadow: 5px 0 0 #31dcfe,0 0px 30px #000000ce;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir{
+    width: 340px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+.btn-expandir > i{
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+ul{
+    margin-top: 10px;
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu{
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+ul li.ativo{
+    background-color: #31dcfe;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+ul li.item-menu:hover{
+    background-color: #31dcfe;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+ul li.item-menu a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link{
+   margin-left: 40px;
+   opacity: 1;
+}
+
+ul li.item-menu a .icon > img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+.header{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 51px;
+}
+
+h1{
+    margin-top: 31px;
+    margin-left: 131px;
+    font-size: 32px;
+}
+
+.block {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    width: 395px;
+    height: 114px;
+    margin-left: 28px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 28px;
+}
+
+.block .content {
+    position: relative; /* Remove 'position: fixed;' */
+    flex: 1;
+    margin: 15px; /* Adiciona margem para alinhar com a div figure */
+}
+
+.block label {
+    font-family: 'Marven';
+    color: #585858;
+    font-weight: 600;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.block p {
+    margin-top: 52px; /* Ajusta a margem superior */
+    margin-left: 15px;
+    font-size: 32px;
+
+}
+
+.banks {
+    display: flex;
+    background-color: #038FB3;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Move a div figure para o lado direito */
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.receits{
+    display: flex;
+    background-color: #FB9102;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Move a div figure para o lado direito */
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.receits img{
+    margin-left: 9px;
+    transform: rotate(-90deg);
+}
+
+.desps{
+    display: flex;
+    background-color: #C8154F;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Move a div figure para o lado direito */
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.desps img{
+    margin-right: 6px;
+
+    transform: rotate(90deg);
+}
+
+.block figure img {
+    width: 30px;
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contas{
+    width: 818px;
+    height: 181px;
+    background-color: #ffffff;
+    margin-left: 130px;
+    margin-top: 48px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contas .ct{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #585858;
+    font-weight: 600;
+}
+
+.contas {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.contas p{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #585858;
+    font-weight: 600;
+}
+
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.modal h2{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#addForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#addForm label[for="tipo"]{
+    font-size: 20px;
+}
+
+#addForm #tipo{
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+    width: 300px;
+    height: 52px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #000000;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#addForm #valor{
+    cursor: pointer;
+    font-size: 15px;
+    padding-left: 15px;
+    margin-top: 20px;
+    width: 300px;
+    height: 52px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #000000;
+    padding-right: 15px;
+}
+
+.close {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#addForm #data{
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 300px;
+    height: 52px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #000000;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#descricao{
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    width: 300px;
+    height: 52px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #000000;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#addForm button{
+    margin-top: 20px;
+    width: 100px;
+    height: 45px;
+    border-radius: 20px;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+#addForm #cnc{
+    font-size: 15px;
+    margin-left: 20px;
+    background: none;
+    color: #FF4545;
+}
+
+#env {
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #FF4545;
+    border: none; /* Remova a borda para evitar inconsistências de estilo */
+    padding: 10px 20px; /* Adicione padding para tornar o botão mais visível */
+}
+
+#env:hover {
+    background-color: #C8154F;
+}
+
+.maiorDeps {
+    background-color: #ffffff;
+    width: 394px;
+    height: 353px;
+    margin-left: 975px;
+    margin-top: -410px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+#MD{
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    color: 585858;
+    display: flex;
+    justify-content: center;
+
+}
+
+.blockMaior hr{
+    height: 1px; /* Define a altura da linha */
+    background-color: #585858; /* Define a cor da linha */
+    margin-top: 10px;
+    border-radius: 0px; /* Adiciona bordas arredondadas */
+    border-style: dashed;
+}
+
+canvas {
+    max-width: 100%;
+    position: relative;
+    display: block;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 130px;
+    margin-top: 80px;
+}
+
+.grapihc {
+    display: flex;
+    width: 818px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.grapihc canvas{
+    font-size: 50px;
+}

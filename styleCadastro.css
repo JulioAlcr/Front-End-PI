@@ -1,0 +1,293 @@
+/* FONTES DA PAGINA DE LOGIN */
+@font-face {
+  font-family: "Cocogoose Norm";
+  src: url("fonts/Cocogoose\ Pro\ Light-trial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cocogoose Ligth";
+  src: url("fonts/Cocogoose\ Pro\ Thin-trial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Autour One";
+  src: url("fonts/AutourOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Marven";
+  src: url("fonts/MavenPro-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  overflow-y: hidden;
+  justify-content: center;
+  background-color: rgb(37, 1, 44);
+}
+
+.container_login {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  height: 580px;
+  position: relative;
+  border-radius: 24px;
+}
+
+.fechar {
+  position: absolute;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  top: 20px;
+  position: absolute;
+  width: 70px;
+  height: 75px;
+  margin-left: 152px;
+}
+
+.principal {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: "Cocogoose Norm";
+  position: relative;
+  left: 62px;
+}
+
+.cred {
+  display: flex;
+  flex-direction: column;
+}
+
+.creds {
+  border-color: black;
+  border-radius: 10px;
+  height: 42px;
+  margin-top: 15px;
+  margin-left: 62px;
+  margin-right: 62px;
+  font-family: "Cocogoose Ligth";
+  font-weight: bold;
+  padding-inline-start: 12px;
+}
+
+.containerbtn {
+  display: flex;
+  position: absolute;
+  left: 120px;
+  margin-top: 15px;
+}
+
+.containerbtn button {
+  cursor: pointer;
+}
+
+.login-btn {
+  justify-content: center;
+  font-family: "Autour One";
+  margin-left: 76px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #038fb3;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #243B68;
+}
+
+.resg {
+  margin-left: 62px;
+  margin-right: 62px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.resg button {
+  cursor: pointer;
+}
+
+.resg button,
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border: none;
+  display: flex;
+  text-decoration: none;
+}
+
+.regis {
+  text-decoration: none;
+  color: #038fb3;
+}
+
+.forg {
+  position: absolute;
+  right: 62px;
+}
+
+.divisao {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.lado1 {
+  position: absolute;
+  vertical-align: middle;
+  background-color: #000000;
+  height: 1px;
+  width: 170px;
+  left: 62px;
+  margin-top: 8px;
+}
+
+.lado2 {
+  position: absolute;
+  vertical-align: middle;
+  background-color: #000000;
+  height: 1px;
+  width: 170px;
+  right: 62px;
+  margin-top: 8px;
+}
+
+.backgroundlateral {
+  border-radius: 15px;
+  display: flex;
+  background-image: url(img/LOGIN/background\ astheric.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 580px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .backgroundlateral {
+    display: none;
+  }
+}
+.h1bg {
+  position: relative;
+  left: 0;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.h2bg {
+  font-family: "Autour One";
+  font-size: 20px;
+  color: #fff;
+}
+
+.datanasc p{
+  margin-left: 62px;
+  margin-top: 16px;
+  font-family:"Marven";
+  font-weight: 700;
+  font: 100;
+}
+
+.date{
+  border-color: black;
+  border-radius: 10px;
+  height: 52px;
+  margin-top: 10px;
+  margin-left: 62px;
+  margin-right: 62px;
+  font-family: "Autour One";
+  padding-inline-start: 12px;
+}
+
+.checkbox {
+  display: inline-block;
+  margin-left: 63px;
+  margin-right: 62;
+  margin-top: 28px;
+  position: relative;
+  user-select: none;
+}
+
+.termos{
+  margin-top: 15px;
+  margin-left: 62px;
+}
+
+.checkbox {
+  display: inline-block;
+  margin-left: 63px;
+  margin-right: 62;
+  margin-top: 15px;
+  position: relative;
+  user-select: none;
+}
+
+.term{
+  font-family: "Marven";
+  font: 400;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.checkbox input {
+  visibility: hidden;
+}
+.checkbox label {
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  color: #038FB3;
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.checkbox label::before {
+  position: absolute;
+  left: 0;
+  border: 2px solid #038FB3;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox input:checked ~ label::before {
+  transform: rotate(40deg);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-radius: 0;
+  width: 5px;
+  height: 10px;
+  left: 10px;
+}

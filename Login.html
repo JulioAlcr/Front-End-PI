@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styleLogin.css"/>
+    <link rel="icon" href="img/pngesquilo - Copia.png">
+    <script src="index.js"></script>
+    <title>Login page</title>
+</head>
+<body>
+    <!-- COMEÇO DO HTML -->
+    <div class="container_login">
+        <div class="login">
+            <!-- ESTES SAO O SVG DE "X" E A IMGEM DA LOGO -->
+            <figure><img class="fechar" src="img/fechar.svg" alt="" /></figure>
+            <figure>
+                <img src="img/pngesquilo - Copia.png" alt="" class="logo" />
+            </figure>
+
+            <!-- AQUI ESTÁ TODO O CORPO DO HTML ANTES DO "or"  -->
+            <div class="principal">
+                <h1>LOGIN</h1>
+
+                <!-- CREDENCIAS SAO O EMAIL E SENHA -->
+                <div class="cred">
+                    <input class="creds" type="text" placeholder="Email" />
+                    <input class="creds" type="password" placeholder="password" />
+                </div>
+                <!-- CHECK-BOX, LEMBRE-SE DE MIM -->
+                <div class="checkbox">
+                    <input type="checkbox" id="chk" checked />
+                    <label for="chk">Remember me</label>
+                </div>
+
+                <!-- BOTÃO DE LOGIN -->
+                <div class="containerbtn">
+                    <button class="login-btn">LOGIN</button>
+                </div>
+
+                <!-- REGISTRAR-SE OU ESQUECEU A SENHA -->
+                <div class="resg">
+                    <a class="regis" href="cadastro.html">Resgiter now</a>
+                    <button class="forg">Forgot password</button>
+                </div>
+
+                <!-- DIVISÃO PARA REDES SOCIAIS -->
+                <div class="divisao">
+                    <div for="or" class="lado1"></div>
+                    <p id="or">or</p>
+                    <div for="or" class="lado2"></div>
+                </div>
+            </div>
+
+            <div class="btnor">
+                <button class="FB"><img src="img/LOGIN/Facebook.png" alt="" class="fb">
+                    LOGIN WITH FACEBOOK</button>
+                <button class="GG"><img src="img/LOGIN/google.png" alt="">
+                    LOGIN WITH GOOGLE</button>
+                <button class="AP"><img src="img/LOGIN/APPLE.png" alt="">
+                    LOGIN WITH APPLE ID</button>
+            </div>
+        </div>
+        <div class="backgroundlateral">
+            <h1 class="h1bg">HELLO!</h1>
+            <h2 class="h2bg">IT'S GOOD TO SEE YOU HERE</h2>
+        </div>
+    </div>
+</body>
+</html>
