@@ -5,7 +5,7 @@
 class DespesaDAO {
 
     public function create(Despesa $despesa) {
-        $sql = "INSERT INTO despesas (tipo, descrição, valor, data) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO despesas (tipo, descricao, valor, data) VALUES (?, ?, ?, ?)";
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->bindValue(1, $despesa->getTipo());
         $stmt->bindValue(2, $despesa->getDescrição());
@@ -14,8 +14,16 @@ class DespesaDAO {
         $stmt->execute();
     }
 
-    public function read(){
-        $sql = "SELECT * FROM despesas";
+    public function readDespesas(){
+        $sql = "SELECT * FROM despesas where tipo = 'despesa'";
+        $stmt = Conexao::getConn()->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function readReceitas(){
+        $sql = "SELECT * FROM despesas where tipo = 'receita'";
         $stmt = Conexao::getConn()->prepare($sql);
         $stmt->execute();
 
@@ -34,10 +42,10 @@ class DespesaDAO {
     
     // }
 
-    // public function delete(Pizza $pizza) {
-    //     $sql = "DELETE FROM pizza WHERE id = ?";
-    //     $stmt = Conexao::getConn()->prepare($sql);
-    //     $stmt->bindValue(1, $pizza->getId());
-    //     $stmt->execute();
-    // }
+    public function delete(Despesa $despesa) {
+        $sql = "DELETE FROM despesas WHERE id = ?";
+        $stmt = Conexao::getConn()->prepare($sql);
+        $stmt->bindValue(1, $despesa->getId());
+        $stmt->execute();
+    }
 }

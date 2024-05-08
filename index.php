@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styleHome.css">
     <link rel="icon" href="img/pngesquilo - Copia.png">
+    <?php
+        require_once "script.php";
+    ?>
     <title>Home page</title>
+    
 </head>
 <body>
     <nav class="menu-lateral">
@@ -79,11 +83,38 @@
     <section class="principal">
         <div class="contas" id="contasAPagar">
             <p class="ct">Próximas contas a pagar</p>
-            <p class="placeholder">Nenhuma conta a pagar no momento.</p>
+            <?php
+                if (count($despesas) > 0) {
+                    foreach ($despesas as $despesa) {
+                        echo "<form action='script.php' method='get'>
+                            <input hidden name='id' value='$despesa->id'>
+                            </input>
+                            <p>"
+                            .$despesa->descricao.": R$".$despesa->valor." - ".DateTime::createFromFormat('Y-m-d', $despesa->data)->format('d/m/Y')
+                            ."<button id='env' name'del' type='submit'>Dar baixa</button>
+                            </p>
+                        </form>";
+                    }
+                } else {
+                    echo "<p>Nenhuma conta a pagar no momento.</p>";
+                }
+            ?>
         </div>
         <div class="contas" id="contasAReceber">
             <p class="ct">Próximas contas a receber</p>
-            <p class="placeholder">Nenhuma conta a receber no momento.</p>
+            <?php
+                if (count($receitas) > 0) {
+                    foreach ($receitas as $despesa) {
+                        echo "
+                        <form action='script.php' method='get'>
+                            <input hidden name='id' value='$despesa->id'></input><p>".$despesa->descricao.": R$".$despesa->valor." - ".DateTime::createFromFormat('Y-m-d', $despesa->data)->format('d/m/Y')
+                            ."<button id='env' name'del' type='submit'>Dar baixa</button></p>
+                        </form>";
+                    }
+                } else {
+                    echo "<p>Nenhuma conta a receber no momento.</p>";
+                }
+            ?>
         </div>
 
         <!-- Maiores despesas; painel grafico lateral -->
@@ -108,7 +139,7 @@
                     <input title="Adicionar Valor" type="text" id="valor" name="valor" placeholder="R$ ">
                     <input title="Adicionar Data" type="date" id="data" name="data">
                     <div class="btns">
-                        <button type="submit" id="env">Enviar</button>
+                        <button name="submit" type="submit" id="env">Enviar</button>
                         <button id="cnc" type="button" class="cancel">Cancelar</button>
                     </div>
                 </form>
@@ -125,7 +156,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="Home_menu.js"></script>
+    <script src="home_menu.js"></script>
 
 </body>
 </html>

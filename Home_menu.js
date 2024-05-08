@@ -36,78 +36,78 @@ function adicionarReceita(descricao, valor, data) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const contasAPagar = document.getElementById('contasAPagar');
-    const contasAReceber = document.getElementById('contasAReceber');
-    const saldoReceitas = document.getElementById('saldoReceitas'); // Elemento que exibe o saldo das receitas
-    const saldoDespesas = document.getElementById('saldoDespesas'); // Elemento que exibe o saldo das despesas
+    // const contasAPagar = document.getElementById('contasAPagar');
+    // const contasAReceber = document.getElementById('contasAReceber');
+    // const saldoReceitas = document.getElementById('saldoReceitas'); // Elemento que exibe o saldo das receitas
+    // const saldoDespesas = document.getElementById('saldoDespesas'); // Elemento que exibe o saldo das despesas
 
-    function adicionarReceita(descricao, valor, data) {
-        const novaReceita = document.createElement('p');
-        novaReceita.textContent = descricao + ': R$ ' + valor.toFixed(2) + ' - ' + data.toLocaleDateString();
+    // function adicionarReceita(descricao, valor, data) {
+    //     const novaReceita = document.createElement('p');
+    //     novaReceita.textContent = descricao + ': R$ ' + valor.toFixed(2) + ' - ' + data.toLocaleDateString();
     
-        // Adiciona um botão "Dar Baixa" para a nova receita
-        const darBaixaBtn = document.createElement('button');
-        darBaixaBtn.textContent = 'Dar Baixa';
-        darBaixaBtn.addEventListener('click', function () {
-            // Transfere o valor para a seção de Receitas
-            const saldoReceitasAtual = parseFloat(saldoReceitas.textContent.replace('R$ ', ''));
-            saldoReceitas.textContent = 'R$ ' + (saldoReceitasAtual + valor).toFixed(2);
+    //     // Adiciona um botão "Dar Baixa" para a nova receita
+    //     const darBaixaBtn = document.createElement('button');
+    //     darBaixaBtn.textContent = 'Dar Baixa';
+    //     darBaixaBtn.addEventListener('click', function () {
+    //         // Transfere o valor para a seção de Receitas
+    //         const saldoReceitasAtual = parseFloat(saldoReceitas.textContent.replace('R$ ', ''));
+    //         saldoReceitas.textContent = 'R$ ' + (saldoReceitasAtual + valor).toFixed(2);
 
-            // Remove a conta da lista de contas a receber
-            novaReceita.remove();
+    //         // Remove a conta da lista de contas a receber
+    //         novaReceita.remove();
 
-            // Verifica se há contas restantes
-            if (contasAReceber.children.length === 2) {
-                contasAReceber.querySelector('.placeholder').style.display = 'block';
-            }
-        });
-        novaReceita.appendChild(darBaixaBtn);
+    //         // Verifica se há contas restantes
+    //         if (contasAReceber.children.length === 2) {
+    //             contasAReceber.querySelector('.placeholder').style.display = 'block';
+    //         }
+    //     });
+    //     novaReceita.appendChild(darBaixaBtn);
 
-        // Adiciona a nova receita à lista de contas a receber
-        contasAReceber.appendChild(novaReceita);
+    //     // Adiciona a nova receita à lista de contas a receber
+    //     contasAReceber.appendChild(novaReceita);
 
-        // Oculta o parágrafo de espaço reservado se a lista de contas a receber não estiver vazia
-        if (contasAReceber.children.length > 2) {
-            contasAReceber.querySelector('.placeholder').style.display = 'none';
-        }
-    }
+    //     // Oculta o parágrafo de espaço reservado se a lista de contas a receber não estiver vazia
+    //     if (contasAReceber.children.length > 2) {
+    //         contasAReceber.querySelector('.placeholder').style.display = 'none';
+    //     }
+    // }
     
-    function adicionarDespesa(descricao, valor, data) {
-        const novaDespesa = document.createElement('p');
-        novaDespesa.textContent = descricao + ': R$ ' + valor.toFixed(2) + ' - ' + data.toLocaleDateString();
+    // function adicionarDespesa(descricao, valor, data) {
+    //     const novaDespesa = document.createElement('p');
+    //     novaDespesa.textContent = descricao + ': R$ ' + valor.toFixed(2) + ' - ' + data.toLocaleDateString();
     
-        // Adiciona um botão "Dar Baixa" para a nova despesa
-        const darBaixaBtn = document.createElement('button');
-        darBaixaBtn.textContent = 'Dar Baixa';
-        darBaixaBtn.addEventListener('click', function () {
-            // Transfere o valor para a seção de Despesas
-            const saldoDespesasAtual = parseFloat(saldoDespesas.textContent.replace('R$ ', ''));
-            saldoDespesas.textContent = 'R$ ' + (saldoDespesasAtual + valor).toFixed(2);
+    //     // Adiciona um botão "Dar Baixa" para a nova despesa
+    //     const darBaixaBtn = document.createElement('button');
+    //     darBaixaBtn.textContent = 'Dar Baixa';
+    //     darBaixaBtn.addEventListener('click', function () {
+    //         // Transfere o valor para a seção de Despesas
+    //         const saldoDespesasAtual = parseFloat(saldoDespesas.textContent.replace('R$ ', ''));
+    //         saldoDespesas.textContent = 'R$ ' + (saldoDespesasAtual + valor).toFixed(2);
     
-            // Remove a conta da lista de contas a pagar
-            novaDespesa.remove();
+    //         // Remove a conta da lista de contas a pagar
+    //         novaDespesa.remove();
     
-            // Verifica se há contas restantes
-            if (contasAPagar.children.length === 2) {
-                contasAPagar.querySelector('.placeholder').style.display = 'block';
-            }
+    //         // Verifica se há contas restantes
+    //         if (contasAPagar.children.length === 2) {
+    //             contasAPagar.querySelector('.placeholder').style.display = 'block';
+    //         }
     
-            // Atualiza o gráfico de despesas
-            atualizarGraficoDespesas([{ descricao: descricao, valor: valor }]);
-        });
+    //         // Atualiza o gráfico de despesas
+    //         atualizarGraficoDespesas([{ descricao: descricao, valor: valor }]);
+    //     });
     
-        novaDespesa.appendChild(darBaixaBtn);
+    //     novaDespesa.appendChild(darBaixaBtn);
     
-        // Adiciona a nova despesa à lista de contas a pagar
-        contasAPagar.appendChild(novaDespesa);
+    //     // Adiciona a nova despesa à lista de contas a pagar
+    //     contasAPagar.appendChild(novaDespesa);
     
-        // Oculta o parágrafo de espaço reservado se a lista de contas a pagar não estiver vazia
-        if (contasAPagar.children.length > 2) {
-            contasAPagar.querySelector('.placeholder').style.display = 'none';
-        }
-    }
+    //     // Oculta o parágrafo de espaço reservado se a lista de contas a pagar não estiver vazia
+    //     if (contasAPagar.children.length > 2) {
+    //         contasAPagar.querySelector('.placeholder').style.display = 'none';
+    //     }
+    // }
     
-    // const addForm = document.getElementById('addForm'); //alguma coisa aqui está impedindo o metodo post
+    // const addForm = document.getElementById('addForm');
 
     // addForm.addEventListener('submit', function (event) {
     //     event.preventDefault(); // Evita o comportamento padrão de enviar o formulário
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     }
 
     //     // Limpa os campos do formulário
-    //     //addForm.reset();
+    //     addForm.reset();
     // });
 
     const menuitem = document.querySelectorAll('.item-menu');
