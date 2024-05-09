@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styleCadastro.css" />
     <link rel="icon" href="img/pngesquilo - Copia.png">
     <script src="index.js"></script>
+    
     <title>Cadastro page</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
     <div class="container_login">
         <div class="login">
             <!-- ESTES SAO O SVG DE "X" E A IMGEM DA LOGO -->
-            <a href="Login.html">
+            <a href="Login.php">
             <figure><img class="fechar" src="img/fechar.svg" alt="" /></figure>
             </a>
             <figure>
@@ -22,14 +23,14 @@
             </figure>
 
             <!-- AQUI ESTÁ TODO O CORPO DO HTML ANTES DO "or"  -->
-            <form class="principal">
+            <form class="principal" action="scriptCadastro.php" method="post">
                 <h1>REGISTER</h1>
 
                 <!-- CREDENCIAS SAO O EMAIL E SENHA -->
                 <div class="cred">
-                    <input class="creds" type="text" placeholder="User Name">
-                    <input class="creds" type="text" placeholder="Email" />
-                    <input class="creds" type="password" placeholder="password" />
+                    <input name="nome" class="creds" type="text" placeholder="User Name">
+                    <input name="email" class="creds" type="text" placeholder="Email" />
+                    <input name="password" class="creds" type="password" placeholder="password" />
                 </div>
 
                 <div class="datanasc">
@@ -46,7 +47,7 @@
                     by the terms and policies outlined by</p>
                 <!-- BOTÃO DE LOGIN -->
                 <div class="containerbtn">
-                    <button class="login-btn" id="cadastroBtn" onclick="cadastrar()">CADASTRA-SE</button>
+                    <button type="submit" name="cadastrar" class="login-btn" id="cadastroBtn" onclick="cadastrar()">CADASTRA-SE</button>
                 </div>
             </form>
         </div>

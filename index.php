@@ -9,6 +9,9 @@
     <link rel="icon" href="img/pngesquilo - Copia.png">
     <?php
         require_once "script.php";
+        if (!isset($_SESSION)) {
+            session_start();
+        }
     ?>
     <title>Home page</title>
     
@@ -55,11 +58,17 @@
                     <span class="txt-link">Perfil</span>
                 </a>
             </li>
+            <li class="item-menu">
+                <a href="logout.php">
+                    <span class="icon"><img src="img/noun-down-3257729.svg" alt=""></i></span>
+                    <span class="txt-link">Logout</span>
+                </a>
+            </li>
         </ul>
     </nav>
     <header>
         <h1>Dashboard</h1>
-        
+
         <div class="header">
             <div class="block">
                 <label for="saldo">Saldo Atual</label>

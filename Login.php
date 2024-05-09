@@ -24,24 +24,27 @@
                 <h1>LOGIN</h1>
 
                 <!-- CREDENCIAS SAO O EMAIL E SENHA -->
-                <div class="cred">
-                    <input class="creds" type="text" placeholder="Email" />
-                    <input class="creds" type="password" placeholder="password" />
-                </div>
-                <!-- CHECK-BOX, LEMBRE-SE DE MIM -->
-                <div class="checkbox">
-                    <input type="checkbox" id="chk" checked />
-                    <label for="chk">Remember me</label>
-                </div>
+                <form action="scriptLogin.php" method="post">
+                    <div class="cred">
+                        <input name="email" class="creds" type="text" placeholder="Email" />
+                        <input name="password" class="creds" type="password" placeholder="password" />
+                    </div>
+                    <!-- CHECK-BOX, LEMBRE-SE DE MIM -->
+                    <div class="checkbox">
+                        <input type="checkbox" id="chk" checked />
+                        <label for="chk">Remember me</label>
+                    </div>
 
-                <!-- BOTÃO DE LOGIN -->
-                <div class="containerbtn">
-                    <button class="login-btn">LOGIN</button>
-                </div>
+                    <!-- BOTÃO DE LOGIN -->
+                    <div class="containerbtn">
+                        <button type="submit" name="login" class="login-btn">LOGIN</button>
+                    </div>
+                </form>
+                
 
                 <!-- REGISTRAR-SE OU ESQUECEU A SENHA -->
                 <div class="resg">
-                    <a class="regis" href="cadastro.html">Resgiter now</a>
+                    <a class="regis" href="cadastro.php">Resgiter now</a>
                     <button class="forg">Forgot password</button>
                 </div>
 
