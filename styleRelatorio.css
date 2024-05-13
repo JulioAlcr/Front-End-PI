@@ -1,0 +1,129 @@
+@font-face {
+    font-family: Marven;
+    src: url("fonts/MavenPro-VariableFont_wght.ttf") format(truetype);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marven';
+}
+
+body {
+    font-family: "Marven";
+    height: 100vh;
+    background-color: #E1EEFF !important; /* Alteração para background vermelho */
+}
+
+nav.menu-lateral {
+    z-index: 2;
+    justify-content: center;
+    width: 90px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 40px 0 40px 1%;
+    box-shadow: 5px 0 0 #31dcfe, 0 0px 30px #000000ce;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+nav.menu-lateral.expandir {
+    width: 340px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+.btn-expandir > i {
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+ul {
+    margin-top: 10px;
+    height: 100%;
+    list-style-type: none;
+}
+ul li.item-menu {
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+/* ul li.ativo {
+    background-color: #31dcfe;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+} */
+
+ul li.item-menu:hover {
+    background-color: #31dcfe;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+ul li.item-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
+   margin-left: 40px;
+   opacity: 1;
+}
+
+ul li.item-menu a .icon > img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+h1{
+    margin-left: 141px;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.relatorios{
+    margin-left: 141px;
+    margin-top: 32px;
+    width: 1243px;
+    height:500px;
+    background-color: #ffffff;padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+h2{
+    font-size: 20px;
+    margin-left: 40%;
+    padding: 5px;
+}
+
+.options{
+    display: flex;
+    margin-top: 5px;
+    background-color: #d1d1d1;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content:space-between ;
+}
+
+
+

@@ -54,11 +54,11 @@ ul li.item-menu{
     transition: 0.5s;
 }
 
-ul li.ativo{
+/* ul li.ativo{
     background-color: #31dcfe;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-}
+} */
 
 ul li.item-menu:hover{
     background-color: #31dcfe;
